@@ -173,8 +173,8 @@ namespace ACT_Log_Extractor
             if (code.Equals("001e")) return "Yell";
             if (code.Equals("000b")) return "Shout";
             if (code.Equals("0018")) return "Free Company";
-            if (code.Equals("0039")) return "Tell";
-            if (code.Equals("0010")) return "Linkshell 1";
+            if (code.Equals("000C")) return "Tell";
+            if (code.Equals("0025")) return "Linkshell 1";
             if (code.Equals("0011")) return "Linkshell 2";
             if (code.Equals("0012")) return "Linkshell 3";
             if (code.Equals("0013")) return "Linkshell 4";
@@ -183,6 +183,7 @@ namespace ACT_Log_Extractor
             if (code.Equals("0016")) return "Linkshell 7";
             if (code.Equals("0017")) return "Linkshell 8";
             //TODO Add mentor chat
+            //TODO Add Emotes and /em chat 
             return "";
         }
 
@@ -207,7 +208,7 @@ namespace ACT_Log_Extractor
 
         private string getLogDirPath()
         {
-            return Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Advanced Combat Tracker\FFXIVLogs";
+            return Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Roaming\Advanced Combat Tracker\FFXIVLogs";
         }
 
         public static long ConvertToUnixTime(DateTime input)
